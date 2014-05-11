@@ -36,14 +36,14 @@ c=data_dates[1,"Weekdays"]
 metering=as.matrix(data_dates[,7:9])
 COLORS=c("black","red","blue")
 LINE.TYPES=c("solid","solid","solid")
-matplot(metering,type="l",col=COLORS,lty=LINE.TYPES,ylab="Energy sub metering",xaxt="n")
+matplot(metering,type="l",col=COLORS,lty=LINE.TYPES,ylab="Energy sub metering",xaxt="n",cex.lab=0.75)
 #
 #  Adding the axes and legend 
 at=c(1,beg_fri+1,nrow(data_dates));labels=c(c,a,b)
-axis(1,at,labels)
+axis(1,at,labels,cex.axis=0.8)
 legend("topright",inset=0.001,
        c("Sub_metering_1 ", "Sub_metering_2 ",
-         "Sub_metering_3 "),col = COLORS, lty = LINE.TYPES,cex=0.65)
+         "Sub_metering_3 "),col = COLORS, lty = LINE.TYPES,cex=0.8)
 dev.copy(png,file="plot3.png",width = 480, height = 480)
 dev.off()
 

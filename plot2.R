@@ -37,12 +37,12 @@ c=data_dates[1,"Weekdays"]
 #
 ## Plotting the initial data
 #
-plot(data_dates$Global_active_power,type="l",ylab="Global Active Power (kilowatts)",xlab="",xaxt="n")
+plot(data_dates$Global_active_power,type="l",ylab="Global Active Power (kilowatts)",xlab="",xaxt="n",cex.lab=0.75)
 #
 ## Plotting the axes
 #
 at=c(1,beg_fri+1,nrow(data_dates));labels=c(c,a,b)
-axis(1,at,labels)
+axis(1,at,labels,cex.axis=0.8)
 # time_vals=data_dates$Index
 # Now we add the plot file as a png to the wd directory by using a device
 dev.copy(png,file="plot2.png",width = 480, height = 480)

@@ -42,41 +42,41 @@ c=data_dates[1,"Weekdays"]
 #
 ## Plotting the initial data
 #
-plot(data_dates$Global_active_power,type="l",ylab="Global Active Power",xlab="",xaxt="n")
+plot(data_dates$Global_active_power,type="l",ylab="Global Active Power",xlab="",xaxt="n",cex.lab=0.8)
 #
 ## Plotting the axes
 #
 at=c(1,beg_fri+1,nrow(data_dates));labels=c(c,a,b)
-axis(1,at,labels)
+axis(1,at,labels,cex.axis=0.8,)
 #
 # Plot 4.2 (Top Right)
 #
-plot(data_dates$Voltage,type="l",ylab="Voltage",xlab="",xaxt="n")
+plot(data_dates$Voltage,type="l",ylab="Voltage",xlab="",xaxt="n",cex.lab=0.8)
 at=c(1,beg_fri+1,nrow(data_dates));labels=c(c,a,b)
-axis(1,at,labels)
-title(xlab="datetime")
-#
+axis(1,at,labels,cex.axis=0.8)
+title(xlab="datetime",cex.lab=0.8)
+#.sub
 #
 # Plot 3  (Bottom Left)
 #
-PLOT  3  Multiple Graph 
+#PLOT  3  Multiple Graph 
 #
 metering=as.matrix(data_dates[,7:9])
 COLORS=c("black","red","blue")
 LINE.TYPES=c("solid","solid","solid")
-matplot(metering,type="l",col=COLORS,lty=LINE.TYPES,ylab="Energy sub metering",xaxt="n")
+matplot(metering,type="l",col=COLORS,lty=LINE.TYPES,ylab="Energy sub metering",xaxt="n",cex.lab=0.75)
 at=c(1,beg_fri+1,nrow(data_dates));labels=c(c,a,b)
-axis(1,at,labels)
-legend("topright",inset=0.001,
+axis(1,at,labels,cex.axis=0.8)
+legend("topright",
        c("Sub_metering_1 ", "Sub_metering_2 ",
-         "Sub_metering_3 "),col = COLORS, lty = LINE.TYPES,bty="n",cex=0.65)
+         "Sub_metering_3 "),col = COLORS, lty = LINE.TYPES,bty="n",cex=0.6)
 #
 # Plot 4.4
 #
-plot(data_dates$Global_reactive_power,type="l",ylab="Global_reactive_power",xlab="",xaxt="n")
+plot(data_dates$Global_reactive_power,type="l",ylab="Global_reactive_power",xlab="",xaxt="n",cex.lab=0.8)
 at=c(1,beg_fri+1,nrow(data_dates));labels=c(c,a,b)
-axis(1,at,labels)
-title(xlab="datetime")
+axis(1,at,labels,cex.axis=0.8)
+title(xlab="datetime",cex.lab=0.8)
 #
 # Now save the multiplot Plot 4
 #

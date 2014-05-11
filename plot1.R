@@ -25,6 +25,6 @@ data_dates$Weekdays=gsub("Saturday","Sat",data_dates$Weekdays)
 ## 
 ##                      PLOT 1 HISTOGRAM
 #
-hist(data_dates$Global_active_power,main="Global Active Power",xlab="Global Active Power (kilowatts)",col="red")
+hist(data_dates$Global_active_power,main="Global Active Power",xlab="Global Active Power (kilowatts)",col="red",cex.lab=0.8)
 dev.copy(png,file="plot1.png",width = 480, height = 480)
 dev.off()
