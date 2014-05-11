@@ -42,8 +42,8 @@ matplot(metering,type="l",col=COLORS,lty=LINE.TYPES,ylab="Energy sub metering",x
 at=c(1,beg_fri+1,nrow(data_dates));labels=c(c,a,b)
 axis(1,at,labels)
 legend("topright",inset=0.001,
-       c("Sub_metering_1", "Sub_metering_2",
-         "Sub_metering_3"),col = COLORS, lty = LINE.TYPES)
+       c("Sub_metering_1 ", "Sub_metering_2 ",
+         "Sub_metering_3 "),col = COLORS, lty = LINE.TYPES,cex=0.65)
 dev.copy(png,file="plot3.png",width = 480, height = 480)
 dev.off()
 
